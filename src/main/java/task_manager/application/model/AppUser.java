@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 @Entity
-@Table(name = "AppUser")
+@Table(name = "APPUSER")
 public class AppUser {
 
     @Id
@@ -18,20 +18,20 @@ public class AppUser {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "firstName")
+    @Column(name = "firstname")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "lastname")
     private String lastName;
 
-    @Column(name = "birthDate")
+    @Column(name = "birthdate")
     private LocalDate birthDate;
 
     @Column(name = "active")
     private boolean active = true;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "contactInfo_id")
+    @JoinColumn(name = "contactinfo_id")
     private ContactInfo contactInfo;
 
     @ManyToMany

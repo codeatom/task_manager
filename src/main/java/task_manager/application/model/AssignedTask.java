@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "AssignedTask")
+@Table(name = "ASSIGNEDTASK")
 public class AssignedTask {
 
     @Id
@@ -15,7 +15,7 @@ public class AssignedTask {
     private boolean assigned;
 
     @OneToOne
-    @JoinColumn(name = "taskItem_id")
+    @JoinColumn(name = "taskitem_id")
     private TaskItem taskItem;
 
     @OneToOne

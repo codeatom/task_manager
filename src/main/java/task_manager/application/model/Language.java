@@ -4,20 +4,20 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name = "Language")
+@Table(name = "LANGUAGE")
 public class Language {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "languageName")
+    @Column(name = "languagename")
     private String languageName;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name = "languageBranch")
+    @Column(name = "languagebranch")
     private String languageBranch;
 
     @ManyToMany(mappedBy = "languageList")

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Address")
+@Table(name = "ADDRESS")
 public class Address {
 
     @Id
@@ -21,7 +21,7 @@ public class Address {
     private String city;
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name = "contactInfo_id")
+    @JoinColumn(name = "contactinfo_id")
     private ContactInfo contactInfo;
 
     public Address() {
